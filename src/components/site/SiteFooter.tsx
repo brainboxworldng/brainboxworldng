@@ -42,8 +42,8 @@ export function SiteFooter() {
         <div>
           <h4 className="mb-4 font-semibold text-white">Get in touch</h4>
           <ul className="space-y-3 text-sm text-white/60">
-            <li className="flex items-start gap-2"><Mail className="mt-0.5 size-4 text-secondary" /> hello@brainboxworld.com</li>
-            <li className="flex items-start gap-2"><Phone className="mt-0.5 size-4 text-secondary" /> +234 800 000 0000</li>
+            <li className="flex items-start gap-2"><Mail className="mt-0.5 size-4 text-secondary" /> hellobrainboxworl@gmail.com</li>
+            <li className="flex items-start gap-2"><Phone className="mt-0.5 size-4 text-secondary" /> +234 813 955 0676</li>
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 size-4 text-secondary" /> Available worldwide, remote-first</li>
           </ul>
         </div>

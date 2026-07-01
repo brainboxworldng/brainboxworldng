@@ -80,9 +80,9 @@ function ContactPage() {
 
           <div className="space-y-4">
             {[
-              { icon: MessageCircle, title: "WhatsApp", value: "Chat with us", href: "https://wa.me/2348000000000" },
-              { icon: Mail, title: "Email", value: "hello@brainboxworld.com", href: "mailto:hello@brainboxworld.com" },
-              { icon: Phone, title: "Phone", value: "+234 800 000 0000", href: "tel:+2348000000000" },
+              { icon: MessageCircle, title: "WhatsApp", value: "Chat with us", href: "https://wa.me/2348139550676" },
+              { icon: Mail, title: "Email", value: "hellobrainboxworl@gmail.com", href: "mailto:hellobrainboxworl@gmail.com" },
+              { icon: Phone, title: "Phone", value: "+234 813 955 0676", href: "tel:+2348139550676" },
               { icon: Clock, title: "Office hours", value: "Mon–Fri · 9am – 6pm" },
               { icon: MapPin, title: "Location", value: "Remote worldwide" },
             ].map(c => (
