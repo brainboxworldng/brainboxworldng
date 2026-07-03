@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Users, Search, ShoppingCart, Zap } from "lucide-react";
+import { TrendingUp, Users, Search, ShoppingCart, Zap, Shield } from "lucide-react";
 
 export function HeroDashboard() {
   return (
@@ -65,10 +65,11 @@ export function HeroDashboard() {
         </div>
       </motion.div>
 
-      <FloatBadge className="-left-4 top-8" delay={0.6}><TrendingUp className="size-3.5 text-emerald-500" /> Mobile Responsive</FloatBadge>
-      <FloatBadge className="-right-4 top-32" delay={0.8}><Search className="size-3.5 text-accent" /> SEO Optimized</FloatBadge>
-      <FloatBadge className="-left-6 bottom-24" delay={1}><Zap className="size-3.5 text-amber-500" /> Fast Loading</FloatBadge>
-      <FloatBadge className="-right-2 -bottom-4" delay={1.2}><TrendingUp className="size-3.5 text-secondary" /> Conversion Focused</FloatBadge>
+      <FloatBadge className="-left-4 top-6" delay={0.6}><TrendingUp className="size-3.5 text-emerald-500" /> Mobile Responsive</FloatBadge>
+      <FloatBadge className="-right-4 top-28" delay={0.8}><Search className="size-3.5 text-accent" /> SEO Optimized</FloatBadge>
+      <FloatBadge className="-left-6 top-1/2" delay={1}><Zap className="size-3.5 text-amber-500" /> Fast Loading</FloatBadge>
+      <FloatBadge className="-right-4 bottom-28" delay={1.1}><Shield className="size-3.5 text-emerald-600" /> Secure & SSL</FloatBadge>
+      <FloatBadge className="-left-2 -bottom-4" delay={1.3}><TrendingUp className="size-3.5 text-secondary" /> Conversion Focused</FloatBadge>
     </div>
   );
 }
