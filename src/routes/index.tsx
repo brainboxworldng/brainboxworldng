@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Star, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star, ChevronDown, Sparkles, Zap, Users, Shield, Clock, Award, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HeroDashboard } from "@/components/site/HeroDashboard";
@@ -56,14 +56,21 @@ function Hero() {
       <div className="container-x grid items-center gap-16 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-white/60 px-4 py-1.5 text-xs font-semibold text-accent backdrop-blur">
-            <Sparkles className="size-3.5" /> Premium Digital Agency
+            <Sparkles className="size-3.5" /> Premium Digital Agency · Trusted by 180+ brands
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            We build websites that <span className="text-gradient">grow businesses</span>.
+            Websites that <span className="text-gradient">grow your business</span>, not just your bounce rate.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            We help brands increase visibility, generate qualified leads and grow revenue through strategic web design, digital marketing, branding and SEO.
+            We help ambitious brands generate more leads, close more sales and rank higher on Google — through strategic web design, SEO and digital marketing that ships fast and scales with you.
           </p>
+          <ul className="mt-6 grid max-w-xl gap-2 sm:grid-cols-2">
+            {["More qualified leads", "Higher search rankings", "Faster page speed", "Better conversion rate"].map(v => (
+              <li key={v} className="flex items-center gap-2 text-sm text-foreground/80">
+                <CheckCircle2 className="size-4 text-success" /> {v}
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-semibold text-white shadow-elegant transition hover:scale-105">
               Get free consultation <ArrowRight className="size-4" />
@@ -95,14 +102,29 @@ function Hero() {
 
 /* --- TRUST --- */
 function TrustBar() {
-  const logos = ["ACME", "NOVA", "PIXEL", "NORTHLINE", "EMBER", "BLOOM"];
+  const pillars = [
+    { icon: Zap, title: "Fast delivery", desc: "Most sites ship in 2–4 weeks." },
+    { icon: MessageCircle, title: "Transparent communication", desc: "Weekly updates, no surprises." },
+    { icon: Shield, title: "Reliable partnership", desc: "Secure, backed-up and monitored." },
+    { icon: Clock, title: "Long-term support", desc: "We stay with you past launch." },
+    { icon: Award, title: "Award-worthy craft", desc: "Design that punches above budget." },
+    { icon: Users, title: "180+ happy clients", desc: "Across 12 industries worldwide." },
+  ];
   return (
-    <section className="border-y bg-white/50 py-10">
+    <section className="border-y bg-white/60 py-12">
       <div className="container-x">
-        <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Trusted by ambitious brands worldwide</p>
-        <div className="mt-6 grid grid-cols-2 gap-6 opacity-60 sm:grid-cols-3 md:grid-cols-6">
-          {logos.map(l => (
-            <div key={l} className="text-center font-display text-xl font-bold tracking-tight">{l}</div>
+        <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Why brands trust BrainboxWorld</p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {pillars.map(p => (
+            <div key={p.title} className="flex items-start gap-3 rounded-2xl border bg-white p-4">
+              <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent">
+                <p.icon className="size-5" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold">{p.title}</p>
+                <p className="text-xs text-muted-foreground">{p.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
