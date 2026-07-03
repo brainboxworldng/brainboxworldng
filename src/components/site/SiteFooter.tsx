@@ -35,6 +35,7 @@ export function SiteFooter() {
           ["About", "/about"],
           ["Portfolio", "/portfolio"],
           ["Case Studies", "/case-studies"],
+          ["Pricing", "/pricing"],
           ["Blog", "/blog"],
           ["FAQ", "/faq"],
           ["Contact", "/contact"],
